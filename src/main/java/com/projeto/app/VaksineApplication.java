@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VakcineApplication {
+public class VaksineApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VakcineApplication.class, args);
+		SpringApplication.run(VaksineApplication.class, args);
 	}
 
 }
