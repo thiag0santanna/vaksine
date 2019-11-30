@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html  >
+<!DOCTYPE html >
+<html  xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" >
 <head>
   <!--     -->
   <meta charset="UTF-8">
@@ -75,7 +76,7 @@
             <div class="media-container-column col-lg-8" data-form-type="formoid">
                               
                 <!---Formbuilder Form--->
-                <form action="cadastroagente" method="RequestMethod.POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form">
+                <form action="cadastroagente" method="RequestMethod.POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form" th:object="${cadastroUsuario}">
                 
 
                     <div class="row">
@@ -85,49 +86,49 @@
                     </div>
                     
                       <div class="form-group">
-                            <label for="nome" class="form-control-label mbr-fonts-style display-7">Nome Completo</label>
-                            <input type="text" name="nome" required="required" class="form-control display-7" id="nome">
+                            <label for="nome" class="form-control-label mbr-fonts-style display-7" >Nome Completo</label>
+                            <input type="text" name="nome" required="required" class="form-control display-7" id="nome" th:field="*{nomeCompleto}">
                         </div>
                         
                         
                         <div class="form-group" data-for="email">
                             <label for="cpf" class="form-control-label mbr-fonts-style display-7">CPF</label>
-                            <input type="text" name="cpf" required="required" class="form-control display-7" id="cpf">
+                            <input type="text" name="cpf" required="required" class="form-control display-7" id="cpf"  th:field="*{cpf}">
                         </div>
                         <div data-for="telefone" class="form-group">
                             <label for="telefone" class="form-control-label mbr-fonts-style display-7">Telefone</label>
-                            <input type="tel" name="telefone" class="form-control display-7" id="telefone">
+                            <input type="tel" name="telefone" class="form-control display-7" id="telefone" th:field="*{telefone}">
                         </div>
                         
                         <div class="form-group" data-for="codPosto">
                             <label for="codPosto" class="form-control-label mbr-fonts-style display-7">Código do posto</label>
-                            <input type="text" name="codPosto" required="required" class="form-control display-7" id="codPosto">
+                            <input type="text" name="codPosto" required="required" class="form-control display-7" id="codPosto" th:field="*{codPosto}">
                         </div>
                         <div class="form-group" data-for="dataNasc">
                             <label for="dataNasc" class="form-control-label mbr-fonts-style display-7">Data de Nascimento</label>
-                            <input type="date" name="dataNasc" required="required" class="form-control display-7" id="dataNasc">
+                            <input type="date" name="dataNasc" required="required" class="form-control display-7" id="dataNasc" th:field="*{dataNasc}">
                         </div>
                         <div class="form-group" data-for="nacionalidade">
                             <label for="nacionalidade" class="form-control-label mbr-fonts-style display-7">Nacionalidade</label>
-                            <input type="text" name="nacionalidade" required="required" class="form-control display-7" id="nacionalidade">
+                            <input type="text" name="nacionalidade" required="required" class="form-control display-7" id="nacionalidade" th:field="*{nacionalidade}">
                         </div>
                         <div class="form-group" data-for="estadoCivil">
                             <label for="estadoCivil" class="form-control-label mbr-fonts-style display-7">Estado Civil</label>
-                            <input type="text" name="estadoCivil" required="required" class="form-control display-7" id="estadoCivil">
+                            <input type="text" name="estadoCivil" required="required" class="form-control display-7" id="estadoCivil" th:field="*{estadoCivil}">
                         </div>
 
-                        <div class="form-group" data-for="name">
+                        <div class="form-group" data-for="endereco">
                             <label for="endereco" class="form-control-label mbr-fonts-style display-7">Endereço</label>
-                            <input type="text" name="endereco" required="required" class="form-control display-7" id="endereco">
+                            <input type="text" name="endereco" required="required" class="form-control display-7" id="endereco" th:field="*{endereco}">
                         </div>
                        
                         <div class="form-group" data-for="senha">
                             <label for="senha" class="form-control-label mbr-fonts-style display-7">Senha</label>
-                            <input type="password" name="senha" required="required" class="form-control display-7" id="senha">
+                            <input type="password" name="senha" required="required" class="form-control display-7" id="senha" th:field="*{senha}">
                         </div>
-                        <div class="form-group" data-for="senha">
-                            <label for="confirmarsenha" class="form-control-label mbr-fonts-style display-7">Confirmar Senha</label>
-                            <input type="password" name="confirmarsenha" required="required" class="form-control display-7" id="confirmarsenha">
+                        <div class="form-group" data-for="confirmarSenha">
+                            <label for="confirmarSenha" class="form-control-label mbr-fonts-style display-7">Confirmar Senha</label>
+                            <input type="password" name="confirmarSenha" required="required" class="form-control display-7" id="confirmarSenha" th:field="*{confirmarSenha}">
                         </div>                        
                   
                     
