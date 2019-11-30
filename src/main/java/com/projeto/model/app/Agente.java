@@ -5,6 +5,7 @@ import java.util.Calendar;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -33,6 +34,15 @@ public class Agente {
 	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Calendar dataNascimento;
 	
+	@Lob
+	private byte[] foto;
+	
+	public byte[] getFoto() {
+		return foto;
+	}
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
+	}
 	public Integer getMatricula() {
 		return matricula;
 	}
